@@ -1,0 +1,153 @@
+<div id="index">
+  <div id="owl-carousel">
+    <div class='item'> <%= image_tag 'Banner_1.jpg' %> </div>
+    <div class='item'> <%= image_tag 'Banner_2.jpg' %> </div>
+    <div class='item'> <%= image_tag 'Banner_3.jpg' %> </div>
+    <div class='item'> <%= image_tag 'Banner_4.jpg' %> </div>
+    <div class='item'> <%= image_tag 'Banner_5.jpg' %> </div>
+    <div class='item'> <%= image_tag 'Banner_6.jpg' %> </div>
+  </div>
+
+  <div id="about_us" class="container">
+    <center><h1>About Us</h1></center>
+    <br>
+    <br>
+    <div class="row">
+      <div class="introduction1 col-md-5 col-md-offset-1">
+        <p>
+        Miracoli Furniture, Inc. is a family owned and operated business.
+        <br>
+        We are committed to bringing you into our family by offering you the best prices,
+        best services and the most environmental form of reupholstering your patio furniture.
+        We have over 29 years of experience in the manufacturing of aluminum outdoor furniture,
+        providing us with a strong foundation in the techniques needed for customizing the
+        restoration of your outdoor furniture.
+        </br></br>
+        Our services include re-sling, re-strapping, sandblast & powdercoat,
+        welding as well as the manufacture of umbrella covers, cushions and parts.
+        Our refinishing processes can restore and customize your outdoor furniture to look new again.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <p>When you contact us, you will be assured to always speak to a representative that will
+        answer all your questions and concerns. By working on a case-to-case basis,
+        we commit to making your <br>experience effortless.
+        </br></br>
+        You are welcomed to call, e-mail, and/or request a proposal at any time. Because your
+        inquiry is important to us, we commit to contacting you within 1 business day, if not immediately.
+        </br></br>
+        We service residential areas, homeowners associations, hotels and even cruise ships
+        in all of the Southern California region—from San Luis Obispo to San Diego.
+        Out of state work orders are upon special request.</br>
+        </p>
+        We look forward to meeting you.</br><blockquote> The Miracoli Furniture, Inc. Team</blockquote>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <center><h1><%= link_to "Why Restore?", restore_path %></h1></center>
+  </div>
+
+  <div id="why_restore">
+    <div class="container">
+      <div class="row">
+        <%= link_to restore_path do %>
+        <div class="restore1 col-xs-5 col-xs-offset-1">
+          <ul>
+            <li><%= image_tag 'go_green.png' %>&nbsp;&nbsp;Go Green!</li>
+            <li><%= image_tag 'customize.png' %>&nbsp;&nbsp;Customize Your Furniture</li>
+            <li><%= image_tag 'services.png' %>&nbsp;&nbsp; Best Customer Service</li>
+          </ul>
+        </div>
+
+        <div class="restore2 col-xs-5">
+          <ul>
+            <li><%= image_tag 'savings.png' %>&nbsp;&nbsp; Savings</li>
+            <li><%= image_tag 'repairs.png' %>&nbsp;&nbsp; Case-To-Case Repairs</li>
+            <li><%= image_tag 'delivery.png' %>&nbsp;&nbsp;Pick-UP & Delivery Services</li>
+          </ul>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div id="our_services">
+    <center><h1>Our Services</h1></center>
+    </br>
+    <center>
+        <ul class="list-inline" id="service_list">
+          <li>
+            <ul id="sub_list">
+              <%= link_to resling_path do %>
+              <li>
+                <%= image_tag 're-sling.png' %>
+              </li><!--
+              --><li>
+                Re-Sling
+              </li>
+              <% end %>
+            </ul>
+          </li><!--
+
+          --><li>
+            <ul id="sub_list">
+              <%= link_to cushion_path do %>
+              <li>
+                <%= image_tag 'cushion.png' %>
+              </li><!--
+              --><li>
+                Cushion
+              </li>
+              <% end %>
+            </ul>
+          </li><!--
+
+          --><li>
+            <ul id="sub_list">
+              <%= link_to sandblast_and_powdercoat_path do %>
+              <li>
+                <%= image_tag 'strip_n_powdercoat.png' %>
+              </li><!--
+          --><li>
+                Strip and Powercoat
+              </li>
+              <% end %>
+            </ul>
+          </li><!--
+
+          --><li>
+            <ul id="sub_list">
+              <%= link_to restrap_path do %>
+              <li>
+                <%= image_tag 're-strap.png' %>
+              </li><!--
+           --><li>
+                Re-Strap
+              </li>
+              <% end %>
+            </ul>
+          </li>
+          <li>
+            <%= link_to 'MORE >>', service_path, id: "service_link" %>
+          </li>
+        </ul>
+      </center>
+  </div>
+
+</div>
+
+<script>
+    $(document).ready(function() {
+
+        $("#owl-carousel").owlCarousel({
+            autoPlay: 3000, //Set AutoPlay to 3 seconds
+            items : 1,
+            itemsDesktop : [1199,1],
+            itemsMobile : [479,1],
+            autoHeight: true
+        });
+    });
+</script>
+

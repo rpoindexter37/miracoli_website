@@ -1,0 +1,49 @@
+<div class="row" >
+  <div class="mini-color col-xs-offset-1">
+    <span class="mini-header"><%= name %></span>
+    </br>
+    </br>
+    <% image.each do | key, value| %>
+      <a class="image_link" data-toggle="modal" data-target="#myModal">
+        <figure>
+          <%= image_tag value[:small] %>
+          <%= image_tag value[:big], :class => "no_show" %>
+          <figcaption><%= key %></figcaption>
+        </figure>
+      </a>
+    <% end %>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <center>
+      <div class="modal-body">
+        Body
+      </div>
+      </center>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.image_link').on('click', function(event){
+      var $title = $(this).find('figcaption').text();
+      $('.modal-title').text("Previewing: " + $title);
+      var $img = $(this).find('.no_show').clone();
+      $img.removeClass('no_show');
+      $img.css('width', '500px');
+      $('.modal-body').html($img);
+    });
+  });
+</script>

@@ -1,0 +1,734 @@
+//Logo & Header
+#header{
+  margin-top: 20px;
+  padding-bottom: 15px;
+  img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  ul{
+    margin-top: 20px;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#footer{
+  background-color: #31333E;
+  padding: 40px;
+  color: #FFFFFF;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  a {
+    color: #FFFFFF;
+  }
+
+  .subtopic{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
+
+#index{
+  blockquote{
+    font-family: 'Great Vibes', cursive;
+    border-left: 0px solid #fff;
+    font-size: 16px;
+  }
+  #about_us{
+    text-align: left;
+    line-height: 1.4em;
+    letter-spacing: 0.03em;
+    font-size: 13px;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  #why_restore{
+
+    margin-top: 20px;
+    background: url('restore_bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    ul{
+      list-style-type: none;
+      padding: 50px 0px 0px 0px;
+      li{
+        margin:0 0 40px 0;
+        font-size: 19px;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #FFFFFF
+      }
+    }
+    @media only screen and (max-width: 980px) {
+      ul{
+        li{
+          font-size: 12px;
+        }
+      }
+    }
+
+  }
+
+  #our_services{
+    padding-bottom: 40px;
+    a {
+      color: #000000;
+    }
+
+    #service_list{
+      li{
+        padding: 0px;
+        margin: 0px;
+      }
+    }
+
+    #sub_list{
+      padding: 0px;
+      list-style-type: none;
+      li{
+        padding: 0px;
+      }
+    }
+
+    #service_link{
+      bottom: 140px;
+      left: 10px;
+      position: relative;
+    }
+  }
+
+}
+
+#restore{
+  background: url('why-restore_bg.jpg');
+  background-size:100% 100%;
+  color: #FFFFFF;
+  padding: 40px 0px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+
+  .restore_sub{
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+  }
+
+  .subheader{
+    font-size: 36px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  #right_text{
+    text-align: right;
+  }
+}
+
+#contact_us{
+  background-color: #72bd44;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  color: #FFFFFF;
+  .bubble{
+    position: relative;
+    width: 340px;
+    height: 245px;
+    padding: 0px;
+    background: #FFFFFF;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: #FFFFFF solid 6px;
+  }
+
+  .bubble:after{
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 14px 14px 0;
+    border-color: #FFFFFF transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    bottom: -14px;
+    left: 55px;
+  }
+
+  .bubble:before{
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 19px 19px 0;
+    border-color: #FFFFFF transparent;
+    display: block;
+    width: 0;
+    z-index: 0;
+    bottom: -25px;
+    left: 50px;
+  }
+  #contact_left{
+    ul{
+      list-style-type: none;
+      font-weight: 300;
+      font-size: 14px;
+      font-style: normal;
+      line-height: 17px;
+      letter-spacing: 0.02em;
+    }
+
+    //point Img
+    #visit_head{
+      right: 7%;
+      font-weight: bold;
+      font-size: 17px;
+      position: relative;
+      font-weight: 500;
+      font-style: normal;
+      line-height: 36px;
+      letter-spacing: 0.02em;
+    }
+
+    //Our Hours are
+    #visit_head2{
+    font-weight: 700;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 10px;
+    letter-spacing: 0.02em;
+    }
+    a{
+      color: white;
+    }
+  }
+  #contact_right{
+    font-weight: 300;
+      font-size: 13px;
+      font-style: normal;
+      // line-height: 10px;
+      // letter-spacing: 0.02em;
+    .contact_size{
+      color: black;
+      width: 350px;
+      height: 30px;
+    }
+    .contact_tsize{
+      color: black;
+      width: 350px;
+      height: 70px;
+    }
+  }
+
+}
+
+#service{
+  .services{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    position: relative;
+  }
+  .s_bold{
+    font-weight: 700;
+    font-size: 38px;
+    font-style: normal;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+   }
+
+  #s2{
+    background-image: url('services_02.jpg');
+    height: 871px;
+    padding-top: 60px;
+
+    //our services
+    #s_title{
+      text-align: center;
+      hr{
+        width: 280px;
+      }
+    }
+
+    //re-sling
+    #s_resling{
+      position: absolute;
+      top: 520px;
+      left: 750px;
+      .s_sub{
+        font-weight: 700;
+        font-size: 35px;
+        bottom: 110px;
+        line-height: 35px;
+        position: absolute;
+      }
+      hr{
+        width: 60px;
+        border: 2px solid;
+        position: absolute;
+      }
+    }
+  }
+  #s3{
+    background-image: url('services_03.jpg');
+    height: 568px;
+    #s_restrap{
+      position: absolute;
+      top: 260px;
+      left: 280px;
+      text-align: right;
+      .s_sub{
+        font-weight: 700;
+        font-size: 35px;
+      }
+      hr{
+        width: 60px;
+        border: 2px solid;
+        position: absolute;
+        right: 7px;
+      }
+    }
+  }
+  #s4{
+    background-image: url('services_04.jpg');
+    height: 574px;
+        //re-sling
+    #s_sand{
+      position: absolute;
+      top: 250px;
+      left: 850px;
+      .s_sub{
+        font-weight: 700;
+        font-size: 30px;
+        bottom: 110px;
+        line-height: 35px;
+        position: absolute;
+      }
+      hr{
+        width: 60px;
+        border: 2px solid;
+        position: absolute;
+      }
+    }
+  }
+  #s5{
+    background-image: url('services_05.jpg');
+    height: 568px;
+    #s_cushion{
+      position: absolute;
+      top: 160px;
+      left: 300px;
+      .s_sub{
+        font-weight: 700;
+        font-size: 30px;
+      }
+      hr{
+        width: 60px;
+        border: 2px solid;
+        position: absolute;
+        left: 1px;
+      }
+    }
+  }
+  #s6{
+    background-image: url('services_06.jpg');
+    height: 568px;
+    #s_umbrella{
+      position: absolute;
+      top: 290px;
+      left: 700px;
+      .s_sub{
+        font-weight: 700;
+        font-size: 30px;
+      }
+      hr{
+        width: 60px;
+        border: 2px solid;
+        position: absolute;
+        left: 1px;
+      }
+    }
+  }
+  #s7{
+    background-image: url('services_07.jpg');
+    height: 567px;
+    #s_table{
+      position: absolute;
+      top: 220px;
+      left: 270px;
+      text-align: right;
+      .s_sub{
+        font-weight: 700;
+        font-size: 30px;
+      }
+      hr{
+        width: 60px;
+        border: 2px solid;
+        position: absolute;
+        right: 6px;
+      }
+    }
+  }
+  #s8{
+    background-image: url('services_08.jpg');
+    height: 568px;
+    #s_misc{
+      position: absolute;
+      top: 80px;
+      left: 730px;
+      text-align: right;
+      .s_sub{
+        font-weight: 700;
+        line-height: 33px;
+        font-size: 30px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 980px) {
+    #s2{
+      background-image: url('services_02_phone.jpg');
+      height: 569px;
+      padding-top: 20px;
+      #s_resling{
+        position: absolute;
+        top: 300px;
+        left: 480px;
+        .s_sub{
+          font-weight: bold;
+          font-size: 35px;
+          bottom: 100px;
+          position: absolute;
+        }
+        hr{
+          width: 60px;
+          border: 2px solid;
+          position: absolute;
+        }
+      }
+    }
+
+    #s3{
+      background-image: url('services_03_phone.jpg');
+      height: 371px;
+      #s_restrap{
+        position: absolute;
+        top: 100px;
+        left: 80px;
+        text-align: right;
+        .s_sub{
+          font-weight: 700;
+          font-size: 35px;
+        }
+        hr{
+          width: 60px;
+          border: 2px solid;
+          position: absolute;
+          right: 7px;
+        }
+      }
+    }
+
+    #s4{
+      background-image: url('services_04_phone.jpg');
+      height: 375px;
+      #s_sand{
+      position: absolute;
+      top: 160px;
+      left: 550px;
+      .s_sub{
+        font-weight: 700;
+        font-size: 30px;
+        bottom: 110px;
+        line-height: 35px;
+        position: absolute;
+      }
+      hr{
+        width: 60px;
+        border: 2px solid;
+        position: absolute;
+      }
+    }
+    }
+
+    #s5{
+      background-image: url('services_05_phone.jpg');
+      height: 371px;
+      #s_cushion{
+      position: absolute;
+      top: 70px;
+      left: 140px;
+      .s_sub{
+        font-weight: 700;
+        font-size: 30px;
+      }
+      hr{
+        width: 60px;
+        border: 2px solid;
+        position: absolute;
+        left: 1px;
+      }
+    }
+    }
+
+    #s6{
+      background-image: url('services_06_phone.jpg');
+      height: 370px;
+      #s_umbrella{
+        position: absolute;
+        top: 170px;
+        left: 500px;
+        .s_sub{
+          font-weight: 700;
+          font-size: 30px;
+        }
+        hr{
+          width: 60px;
+          border: 2px solid;
+          position: absolute;
+          left: 1px;
+        }
+      }
+    }
+
+    #s7{
+      background-image: url('services_07_phone.jpg');
+      height: 370px;
+      #s_table{
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        text-align: right;
+        .s_sub{
+          font-weight: 700;
+          font-size: 30px;
+        }
+        hr{
+          width: 60px;
+          border: 2px solid;
+          position: absolute;
+          right: 6px;
+        }
+      }
+
+    }
+
+    #s8{
+      background-image: url('services_08_phone.jpg');
+      height: 371px;
+      #s_misc{
+        position: absolute;
+        top: 60px;
+        left: 450px;
+        text-align: right;
+        .s_sub{
+          font-weight: 700;
+          line-height: 33px;
+          font-size: 30px;
+        }
+      }
+    }
+
+  }
+}
+
+#ser_option{
+  background-color: #EFEBEA;
+  font-size: 16px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  a {
+    color: rgb(51,51,51);
+  }
+  .link_bold{
+    color: black;
+  }
+  .s_box_header{
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .s_box{
+    background-color: white;
+    height: 330px;
+    font-size: 12px;
+    padding: 20px;
+    font-weight: 350;
+    font-style: normal;
+    line-height: 18px;
+  }
+  @media only screen and (max-width: 980px) {
+    .s_box{
+      background-color: white;
+      height: 450px;
+      font-size: 12px;
+      padding: 20px;
+      font-weight: 350;
+      font-style: normal;
+      line-height: 18px;
+    }
+  }
+
+  .s_big_photo{
+    height: 500px;
+    width: 400px;
+    position: relative;
+    right: 17px;
+    img{
+      height: 450px;
+      width: 440px;
+    }
+  }
+  .slider_photo{
+    padding-top: 10px;
+    height: 100px;
+    .item{
+      display: block;
+      cursor: pointer;
+      padding-right: 10px;
+
+    }
+  }
+  .mini-color{
+    background-color: white;
+    padding: 20px;
+  }
+  .mini-header{
+    text-decoration: underline;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+  }
+  .service_redirect{
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.03em;
+  }
+
+  figure{
+    display: inline-block;
+    padding: 10px;
+  }
+  figcaption {
+    text-align: center;
+    font-size: 12px;
+  }
+  .breadcrumb{
+    position: relative;
+    right: 19px;
+    top: 20px;
+    background-color: #EFEBEA;
+  }
+  #s8{
+    background-image: url('services_08.jpg');
+    height: 568px;
+    #s_misc{
+      position: absolute;
+      text-align: right;
+      left:850px;
+      top: 300px;
+      color:white;
+      .s_sub{
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+    .breadcrumb{
+      position: relative;
+      left: 230px;
+    }
+    @media only screen and (max-width: 980px) {
+      background-image: url('services_08_phone.jpg');
+      height: 371px;
+      #s_misc{
+        position: absolute;
+        text-align: right;
+        left:550px;
+        top: 300px;
+        color:white;
+        .s_sub{
+          font-weight: bold;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .misc_t{
+    font-weight: 500;
+    font-size: 17px;
+  }
+  .misc_text{
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.03em;
+  }
+  #misccrumbs{
+    position: relative;
+    left: 20px;
+    font-size: 13px;
+  }
+
+}
+
+#swatch_book{
+  background-color: #EFEBEA;
+  height: 500px;
+  padding-top: 20px;
+  .btn{
+    padding: 24px 48px;
+  }
+}
+
+.swatch{
+  background-color: #EFEBEA;
+  height: 1050px;
+}
+
+#shop{
+  background: url('shop_bg.jpg');
+  background-size:100% 100%;
+  color: #FFFFFF;
+  font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+  height: 620px;
+  text-align: right;
+  #shop_header{
+    color: black;
+    font-size: 36px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+  }
+  @media only screen and (max-width: 980px) {
+    background: url('shop_bg_phone.jpg');
+    background-repeat: no-repeat;
+    height: 455px;
+  }
+
+  #shop_sub{
+    color: black;
+  }
+}

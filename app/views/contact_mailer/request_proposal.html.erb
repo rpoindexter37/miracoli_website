@@ -1,0 +1,20 @@
+<p>Hello Miracoli, </p>
+<p><%= @name %> would like to request a quote from you.</p>
+
+For the following furniture,
+<br><%= h simple_format(@furn) %>
+<br>
+
+They would like the following services:
+<br><%= h simple_format(@serv) %>
+<br>
+
+
+  Their info contact is the following:
+  Email: <%= @email %>
+  <br> Phone #: <%= @phone %>
+<% unless @no_show %>
+  <br> Pick up or Delivery?: <%= @theme %>
+  <br> Address: <%= @addr %>
+<% end %>
+

@@ -1,0 +1,32 @@
+<div id="header">
+  <div class="container">
+    <%= link_to root_path do %>
+      <%= image_tag 'logo.png', :class => "btn" %>
+    <% end %>
+    <ul class="list-inline">
+      <li>
+        <%= link_to "HOME", root_path %>
+      </li>
+      <li>|</li>
+      <li>
+        <%= link_to "WHY RESTORE?", restore_path %>
+      </li>
+      <li>|</li>
+      <li>
+        <%= link_to "SERVICES", service_path %>
+      </li>
+      <li>|</li>
+      <li>
+        <%= link_to "SWATCH BOOK", swatch_path %>
+      </li>
+      <li>|</li>
+      <li>
+        <%= link_to "SHOP", shop_path %>
+      </li>
+      <li>|</li>
+      <li>
+        <%= link_to "CONTACT US", contact_path %>
+      </li>
+    </ul>
+  </div>
+</div>

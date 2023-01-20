@@ -1,0 +1,70 @@
+<div class="row service_redirect">
+  <div class="col-xs-11 col-xs-offset-1 breadcrumb">
+     <%= "#{home_service} / ".html_safe+"#{safe_service}/ ".html_safe %>
+     <span class="link_bold"><%= "#{@name}" %></span>
+  </div>
+</div>
+<br>
+<div class="row">
+  <!-- left side -->
+  <div class="col-sm-1 col-xs-offset-1 s_big_photo">
+  </div>
+  <!-- right side -->
+  <div class="col-sm-5 col-xs-offset-1">
+    <div class="row s_box">
+      <%= @box %>
+    </div>
+
+    <div class="row slider_photo" id="s-mini-photo">
+    </div>
+
+  </div>
+</div>
+<br>
+<br>
+<br>
+<% unless (!defined? p1) || (p1.empty?) %>
+  <%= render partial: "x_selection", :locals => {
+    :name => p1[:name],
+    :image => p1[:image] }%>
+  </br>
+<% end %>
+<% unless (!defined? p2) || (p2.empty?) %>
+  <%= render partial: "x_selection", :locals => {
+    :name => p2[:name],
+    :image => p2[:image] } %>
+<% end %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    // Set the mini photos
+    var $mini = "";
+    <% photo.each do | key, value| %>
+      $mini = $mini + '<a class="mini-mi">';
+      $mini = $mini + '<%= j(image_tag key).html_safe %>';
+      $mini = $mini + '<%= j(image_tag value, :class => "no_show" ).html_safe %>';
+      $mini = $mini + '</a>';
+    <% end %>
+    $("#s-mini-photo").html($mini);
+
+    // Set the big photo
+    <% k, v = photo.first %>
+    $('.s_big_photo').html('<%= j(image_tag v).html_safe %>')
+
+    //activate owl Carousel
+    $("#s-mini-photo").owlCarousel({
+        items : 4,
+        itemsDesktop : [1199,3],
+        itemsDesktopSmall : [979,3]
+    });
+
+    $('.mini-mi').on('click', function(event){
+      var $src = $(this).find('.no_show').attr('src');
+      $('.s_big_photo').find('img').attr('src', $src);
+    });
+  });
+</script>
+
+
+
+

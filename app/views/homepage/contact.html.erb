@@ -1,0 +1,155 @@
+<div id="contact_us">
+  <div class="container">
+    <div class="row">
+
+      <!-- left column -->
+      <div class="col-xs-6">
+
+        <div class="row">
+          <div class="col-xs-4 col-xs-offset-2">
+            <%= image_tag 'visit_us.png' %>
+          </div>
+        </div>
+
+        </br>
+        </br>
+
+        <div class="row">
+          <div class="col-xs-4 col-xs-offset-2">
+            <p class="bubble">
+              <iframe width="327" height="232" frameborder="0" style="border:0;position: relative;" src="https://www.google.com/maps/embed/v1/place?q=1026%20E%20Lacy%20Ave%2C%20Anaheim%2C%20CA%2C%20United%20States&key=AIzaSyCSpMAdYgdk8SIXsk68wxaFCABqekjEXAc" allowfullscreen></iframe>
+            </p>
+          </div>
+        </div>
+
+        </br>
+        </br>
+
+        <div class="row">
+          <div id="contact_left" class="col-xs-7 col-xs-offset-2">
+            <ul>
+              <li><div id="visit_head"><%= image_tag 'point.png' %> Miracoli Furniture, Inc</div> </li>
+              <li> 1026 E.Lacy Ave.</li>
+              <li> Anaheim, CA 92805</li>
+              </br>
+              <li>Email: 
+                <%= mail_to "info@miracolifurnitureinc.com" do %>
+                  info@miracolifurnitureinc.com
+                <% end %>
+              </li>
+              </br>
+              <li>Office: (714) 502 - 9214</li>
+              <li>Fax:    (714) 502 - 9120</li>
+              </br>
+              <li><div id="visit_head2">Our Hours Are:</div></li>
+              </br>
+              <li>Monday - Friday</li>
+              <li>From 8:30 a.m. - 4:30 p.m.</li>
+              </br></br></br>
+              <li><div id="visit_head2">For updates, follow us on Social Media:</div></li>
+              </br>
+              <li>
+                <%= link_to "https://www.facebook.com/miracolifurniture/timeline", :target => "_blank" do %>
+                  <%= image_tag 'fb.png' %>
+                <% end %>
+                <%= link_to "https://instagram.com/miracolifurniture/", :target => "_blank" do %>
+                  <%= image_tag 'insta.png' %>
+                <% end %>
+                <%= link_to "http://www.yelp.com/biz/miracoli-anaheim", :target => "_blank" do %>
+                  <%= image_tag 'yelp.png' %>
+                <% end %>
+                <%= link_to "https://www.linkedin.com/company/miracoli-furniture-inc-", :target => "_blank" do %>
+                  <%= image_tag 'linked.png' %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <!-- end left column -->
+
+      <!-- right column -->
+      <div class="col-xs-6">
+
+        <div class="row">
+          <div class="col-xs-4 col-xs-offset-2"><%= image_tag 'visit_us_2.png' %>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-2">
+            </br></br>
+            <%= form_tag '/contact_email', :id => 'contact_right', multipart: true do -%>
+
+              <div><%= label_tag 'name' %></div>
+              <div><%= text_field_tag 'name','',class: "contact_size", placeholder: "John Smith", :required => true %></div>
+
+              </br>
+
+              <div><%= label_tag 'phone' %></div>
+              <div><%= phone_field_tag 'phone','',class: "contact_size", placeholder: "(714) 502 - 9214", :required => true %></div>
+
+              </br>
+
+              <div><%= label_tag 'email' %></div>
+              <div><%= email_field_tag 'email','',class: "contact_size", placeholder: "info@miracolifurnitureinc.com", :required => true %></div>
+
+              </br>
+
+              <div><%= label_tag 'Furniture Description' %></div>
+              <div><%= text_area_tag 'furniture','',class: "contact_tsize", placeholder: "10 year old mahogany chair", :required => true %></div>
+
+              </br>
+
+              <div><%= label_tag 'Services Requested' %></div>
+              <div><%= text_area_tag 'services', '',class: "contact_tsize", placeholder: "Re-Sling", :required => true %></div>
+
+              <div id="theme">
+                <%= label_tag 'theme', "Pick Up or Delivery? (Optional):" %>
+                <span><%= radio_button_render %></span>
+                <p id="theme_location">
+                  <%= label_tag 'address', 'Write your address here:' %>
+                  <%= text_area_tag 'address', '', class: "contact_tsize", placeholder: "EX: 1026 E.Lacy Ave. \n Anaheim, CA 92805" %>
+                </p>
+              </div>
+
+              </br>
+
+              <div><%= label_tag 'contact_attach', 'Upload a Photo of your Furniture:'%></div>
+              <div class="upload"><%= file_field_tag 'contact_attach[]', multiple: true %></div>
+              <br>
+              <p> For a more accurate proposal, <br>please attach a photo </p>
+
+              <br>
+
+              <div><%= submit_tag 'Submit',class: 'btn btn-primary melbtn' %></div>
+              <br>
+              <div id="submit_flash">
+                <%= flash_messages %>
+              </div>
+              <div>You will be contacted within 1 business day.</div>
+            <% end -%>
+            <!-- end of form -->
+          </div>
+        </div>
+
+      </div>
+      <!-- end right column -->
+
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('input[type=radio]').change(function() {
+      if (this.value === 'NO') {
+        $('#theme_location').hide()
+      } else {
+        $('#theme_location').show()
+      }
+    });
+  });
+</script>

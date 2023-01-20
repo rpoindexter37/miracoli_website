@@ -1,0 +1,108 @@
+<div id="footer">
+  <div class="container">
+    <div class="row">
+      <div id="fimage" class="col-xs-3">
+        <%= link_to root_path do %>
+          <%= image_tag 'logo_footer.png' %>
+        <% end %>
+      </div>
+
+      <div id="fmenu" class="col-xs-2">
+        <span class="subtopic">Menu</span>
+        </br>
+        </br>
+        <%= link_to "Home", root_path %>
+        <br>
+        <%= link_to "Why Restore?", restore_path %>
+        <br>
+        <%= link_to "Swatch Book", swatch_path %>
+        <br>
+        <%= link_to "Service", service_path %>
+        <br>
+        <%= link_to "Shop", shop_path %>
+        <br>
+        <%= link_to "Contact Us", contact_path %>
+      </div>
+
+      <div id="fcontact" class="col-xs-4">
+        <span class="subtopic">Contact Us</span>
+        </br>
+        </br>
+        1026 E.Lacy Ave.,
+        <br>
+        Anaheim, CA 92805
+        </br>
+        </br>
+        Office: (714) 502-9214
+        <br>
+        Fax: (714) 502-9120
+        </br>
+        </br>
+        <%= mail_to "INFO@MIRACOLIFURNITUREINC.COM" do %>
+            info@miracolifurnitureinc.com
+        <% end %>
+        </br>
+        </br>
+        Nazario Arroyo (Owner)
+        <br>
+        Cell: (714) 651-2544
+        </br>
+        </br>
+        Our Hours Are:
+        <br>
+        Monday-Friday
+        <br>
+        From 8:30 a.m. - 4:30 p.m.
+        <br>
+        Pacific Time
+        <br>
+        Saturday upon request.
+      </div>
+
+      <div id="fsocial" class="col-xs-3">
+        <span class="subtopic">Social</span>
+        </br>
+        </br>
+        <%= link_to "https://www.facebook.com/miracolifurniture/timeline", :target => "_blank" do %>
+          <%= image_tag 'fb_footer.png' %>
+        <% end %>
+        <%= link_to "https://www.facebook.com/miracolifurniture/timeline", :target => "_blank" do %>
+        Facebook
+        <% end %>
+        </br>
+        </br>
+        <%= link_to "https://instagram.com/miracolifurniture/", :target => "_blank" do %>
+          <%= image_tag 'insta_footer.png' %>
+        <% end %>
+        <%= link_to "https://instagram.com/miracolifurniture/", :target => "_blank" do %>
+        Instagram
+        <% end %>
+        </br>
+        </br>
+        <%= link_to "http://www.yelp.com/biz/miracoli-anaheim", :target => "_blank" do %>
+          <%= image_tag 'yelp_footer.png' %>
+        <% end %>
+        <%= link_to "http://www.yelp.com/biz/miracoli-anaheim", :target => "_blank" do %>
+        Yelp
+        <% end %>
+        </br>
+        </br>
+        <%= link_to "https://www.linkedin.com/company/miracoli-furniture-inc-", :target => "_blank" do %>
+          <%= image_tag 'linkedin_footer.png' %>
+        <% end %>
+        <%= link_to "https://www.linkedin.com/company/miracoli-furniture-inc-", :target => "_blank" do %>
+        Linkedin
+        <% end %>
+        </br>
+        </br>
+        <%= mail_to "info@miracolifurnitureinc.com" do %>
+          <%= image_tag 'email_footer.png' %>
+        <% end %>
+        <%= mail_to "info@miracolifurnitureinc.com" do %>
+        Email
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
