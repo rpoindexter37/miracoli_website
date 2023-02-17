@@ -37,7 +37,7 @@ gem 'tzinfo', '~> 2.0'
 gem 'tzinfo-data', '~> 1.2022', '>= 1.2022.7'
 gem 'webrick', '~> 1.7'
 
-gem 'active_storage-postgresql', '~> 0.3.0'
+#gem 'active_storage-postgresql', '~> 0.3.0'
 gem "image_processing", ">= 1.2"
 
 
