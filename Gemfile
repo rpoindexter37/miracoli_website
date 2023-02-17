@@ -1,8 +1,15 @@
 source 'https://rubygems.org'
 
+ruby "3.1.3"
+
 gem 'pg', '~> 1.4', '>= 1.4.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '6.1.7'
+gem "sprockets-rails"
+gem "puma", "~> 5.0"
+gem "importmap-rails"
+gem "turbo-rails"
+gem "stimulus-rails"
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -30,7 +37,7 @@ gem 'tzinfo', '~> 2.0'
 gem 'tzinfo-data', '~> 1.2022', '>= 1.2022.7'
 gem 'webrick', '~> 1.7'
 
-
+gem 'active_storage-postgresql'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
