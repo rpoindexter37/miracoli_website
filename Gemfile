@@ -38,6 +38,8 @@ gem 'tzinfo-data', '~> 1.2022', '>= 1.2022.7'
 gem 'webrick', '~> 1.7'
 
 gem 'active_storage-postgresql', '~> 0.3.0'
+gem "image_processing", ">= 1.2"
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
